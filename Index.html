@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>¡Feliz aniversario!</title>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.1/dist/confetti.browser.min.js"></script>
     <style>
         body {
             background-color: #f8f8f8;
@@ -13,7 +14,7 @@
             margin: 0;
             color: #333;
             font-size: 2em;
-            background-size: cover;
+            background-size: contain;
             transition: background-image 1s;
         }
         #mensaje {
@@ -36,22 +37,22 @@
 </head>
 <body>
     <div id="mensaje">¡Feliz aniversario, Amor! 🎉🎉🎉</div>
-    <button id="boton">¡Ya casémonos!</button>
+    <button id="boton" onclick="crearConfeti()">¡Ya casémonos!</button>
     <script>
         var imagenes = [
-            'file:///D:/Babe/Aniversario/I1.jpeg',
-            'file:///D:/Babe/Aniversario/I2.jpeg',
-            'file:///D:/Babe/Aniversario/I3.jpeg',
-            'file:///D:/Babe/Aniversario/I4.jpeg',
-            'file:///D:/Babe/Aniversario/tetracion.png',
-            'file:///D:/Babe/Aniversario/tetracion2.png',
-            'file:///D:/Babe/Aniversario/I5.jpeg',
-            'file:///D:/Babe/Aniversario/I6.jpeg',
-            'file:///D:/Babe/Aniversario/I7.jpeg',
-            'file:///D:/Babe/Aniversario/I8.jpeg',
-            'file:///D:/Babe/Aniversario/I9.jpeg',
-            'file:///D:/Babe/Aniversario/I10.jpeg',
-            'file:///D:/Babe/Aniversario/I11.jpeg',
+            'Imagenes/I1.jpeg',
+            'Imagenes/I2.jpeg',
+            'Imagenes/I3.jpeg',
+            'Imagenes/I4.jpeg',
+            'Imagenes/tetracion.png',
+            'Imagenes/tetracion2.png',
+            'Imagenes/I5.jpeg',
+            'Imagenes/I6.jpeg',
+            'Imagenes/I7.jpeg',
+            'Imagenes/I8.jpeg',
+            'Imagenes/I9.jpeg',
+            'Imagenes/I10.jpeg',
+            'Imagenes/I11.jpeg',
             // Agrega más rutas de imágenes si lo deseas
         ];
         var mensajes = [
@@ -70,6 +71,14 @@
             'FELIZ 8 MESES',
             // Agrega más mensajes si lo deseas
         ];
+        function crearConfeti(){
+            console.log("Pd: no entiendo las tetraciones ayudampd2: y la de socializar te la sabes")
+            confetti({
+            particleCount: 80,
+            spread: 190,
+            origin: { y: 0.6 }
+            });
+        }
         var indiceActual = 0;
         var intervalo = setInterval(function() {
             document.body.style.backgroundImage = 'url(' + imagenes[indiceActual] + ')';
@@ -81,10 +90,10 @@
             }
         }, 2000);  // Cambia de imagen y mensaje cada 2 segundos
 
-        document.getElementById('boton').addEventListener('click', function() {
-            // Aquí puedes agregar el código para mostrar el confeti
-            alert('¡Confeti!');
-        });
+        // document.getElementById('boton').addEventListener('click', function() {
+        //     alert('¡Confeti!');
+        //Añade tu confeti
+        // });
     </script>
 </body>
 </html>
